@@ -1,0 +1,481 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0; }
+
+body {
+  width: 1920px;
+  height: auto;
+  font-family: "µ╕╕πé┤πé╖πââπé»", YuGothic, "πâÆπâ⌐πé«πâÄΦºÆπé┤ Pro", "Hiragino Kaku Gothic Pro", "πâíπéñπâ¬πé¬", "Meiryo", sans-serif; }
+
+.b-title {
+  font-family: "µ╕╕µÿÄµ£¥", YuMincho, "πâÆπâ⌐πé«πâÄµÿÄµ£¥ ProN W3", "Hiragino Mincho ProN", "HGµÿÄ    µ£¥E", "∩╝¡∩╝│ ∩╝░µÿÄµ£¥", serif;
+  color: #642200;
+  font-weight: 600;
+  font-size: 36px; }
+
+a.menu-name, .s-title, p.copy-right {
+  font-size: 14px;
+  font-weight: 400;
+  color: #ffffff;
+  font-family: 'Muli', sans-serif; }
+
+.text {
+  font-size: 13px;
+  font-weight: 500;
+  color: #000000; }
+
+.container {
+  width: 1000px;
+  height: auto;
+  margin: auto;
+  text-align: center; }
+
+header .slider {
+  max-width: 100%;
+  border: 20px solid white;
+  height: 100vh;
+  background-image: url("../images/slider/main03.jpg");
+  background-size: cover;
+  background-attachment: fixed; }
+header .logo {
+  margin-top: 250px;
+  height: 163px;
+  margin-bottom: 75px; }
+header h2.b-title {
+  color: #ffffff; }
+header p.s-title {
+  margin: 50px 0px 78px 0px;
+  font-weight: bold; }
+header .menu ul {
+  display: inline-block; }
+header .menu li {
+  list-style: none;
+  display: inline-block; }
+header .menu .menu-name {
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-right: 50px;
+  font-weight: bold; }
+header a.social-media {
+  display: inline-block;
+  margin-right: 15px; }
+  header a.social-media:lastchild {
+    margin-right: 0px; }
+header a.social-media img {
+  height: 36px;
+  width: 36px; }
+
+section.content-1 {
+  width: 100%;
+  max-width: 100%;
+  height: 424px; }
+  section.content-1 .card {
+    width: 50%;
+    height: 100%;
+    background-image: url("../images/content-1/bg_bake.jpg");
+    background-size: cover;
+    float: left;
+    position: relative; }
+  section.content-1 .right {
+    background-image: url("../images/content-1/bg_cake.jpg"); }
+  section.content-1 .symbo {
+    position: absolute;
+    top: 77px;
+    right: 250px;
+    z-index: 6; }
+  section.content-1 .box {
+    width: 520px;
+    height: 245px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 5;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.4588235294); }
+  section.content-1 .text-box {
+    padding: 35px 0px 35px 70px; }
+  section.content-1 .s-title {
+    margin-bottom: 25px; }
+  section.content-1 .s-title, section.content-1 .b-title, section.content-1 .btn {
+    color: #642200; }
+  section.content-1 .b-title {
+    width: 300px;
+    line-height: 42px;
+    font-weight: 500; }
+  section.content-1 .btn {
+    width: 218px;
+    height: 34px;
+    border: 2px solid #642200;
+    text-align: center;
+    line-height: 32px;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 16px;
+    font-family: "µ╕╕πé┤πé╖πââπé»", YuGothic, "πâÆπâ⌐πé«πâÄΦºÆπé┤ Pro", "Hiragino Kaku Gothic Pro", "πâíπéñπâ¬πé¬", "Meiryo", sans-serif;
+    margin-top: 25px; }
+    section.content-1 .btn:hover {
+      background-color: #642200;
+      color: #ffffff; }
+
+section.content-2 {
+  max-width: 100%;
+  height: 393px;
+  background-color: #fff3e1; }
+  section.content-2 .container {
+    position: relative;
+    z-index: 1; }
+  section.content-2 h1 {
+    color: #642200;
+    position: absolute;
+    top: 90px;
+    left: 0px; }
+  section.content-2 h1 span {
+    display: block;
+    width: 40px;
+    line-height: 40px;
+    font-weight: 400; }
+  section.content-2 .left p {
+    color: #642200;
+    position: absolute;
+    top: 120px;
+    left: 55px;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg); }
+  section.content-2 .right {
+    position: absolute;
+    top: 100px;
+    left: 120px; }
+  section.content-2 .right p {
+    color: #000000;
+    line-height: 30px;
+    text-align: left;
+    font-weight: 400; }
+  section.content-2 .btn {
+    position: absolute;
+    top: 145px;
+    left: 0px;
+    background-color: #642200;
+    color: white;
+    width: 218px;
+    height: 34px;
+    border: 2px solid #642200;
+    text-align: center;
+    line-height: 32px;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 16px;
+    font-family: "µ╕╕πé┤πé╖πââπé»", YuGothic, "πâÆπâ⌐πé«πâÄΦºÆπé┤ Pro", "Hiragino Kaku Gothic Pro", "πâíπéñπâ¬πé¬", "Meiryo", sans-serif; }
+    section.content-2 .btn:hover {
+      background-color: #642200;
+      color: #ffffff; }
+
+section.content-3 {
+  max-width: 100%;
+  height: 692px;
+  background-color: #ff9c46; }
+  section.content-3 .title h1 {
+    color: #642200;
+    padding-top: 90px; }
+  section.content-3 .title p {
+    color: #642200;
+    margin-top: 20px;
+    margin-bottom: 46px; }
+  section.content-3 .card {
+    width: 300px;
+    height: 312px;
+    float: left;
+    margin-right: 50px; }
+    section.content-3 .card:last-child {
+      margin-right: 0px; }
+  section.content-3 .card-title {
+    font-size: 13px;
+    font-weight: 500;
+    color: #000000;
+    font-size: 14px;
+    color: #642200;
+    display: inline-block;
+    border-bottom: 2px solid #642200;
+    margin-bottom: 20px; }
+  section.content-3 .card-item {
+    width: 300px;
+    height: 80px;
+    background: #fff3e1;
+    text-align: left;
+    border: 1px solid #fff3e1;
+    margin-bottom: 15px; }
+  section.content-3 .card-item img {
+    height: 80px;
+    display: inline-block;
+    float: left; }
+  section.content-3 .text {
+    width: 220px;
+    height: 80px;
+    float: left; }
+  section.content-3 .text p {
+    color: #642200;
+    display: inline-block;
+    padding-left: 15px; }
+    section.content-3 .text p:first-child {
+      padding-top: 15px; }
+    section.content-3 .text p:last-child {
+      color: #000000; }
+  section.content-3 .btn {
+    width: 218px;
+    height: 34px;
+    border: 2px solid #642200;
+    text-align: center;
+    line-height: 32px;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 16px;
+    font-family: "µ╕╕πé┤πé╖πââπé»", YuGothic, "πâÆπâ⌐πé«πâÄΦºÆπé┤ Pro", "Hiragino Kaku Gothic Pro", "πâíπéñπâ¬πé¬", "Meiryo", sans-serif;
+    width: 300px;
+    display: inline-block;
+    background: #642200;
+    color: #ffffff;
+    margin-top: 50px; }
+    section.content-3 .btn:hover {
+      background-color: #642200;
+      color: #ffffff; }
+
+footer {
+  width: 100%;
+  max-width: 100%;
+  height: 535px;
+  background-image: url("../images/footer/footer_about.jpg");
+  background-size: cover; }
+  footer .logo img {
+    width: 70px;
+    height: 84px;
+    margin-top: 70px; }
+  footer .text {
+    width: 390px;
+    height: 150px;
+    line-height: 20px;
+    margin: 30px auto;
+    color: #ffffff; }
+    footer .text::before {
+      content: "";
+      width: 230px;
+      height: 2px;
+      background-color: #ffffff;
+      display: block;
+      margin: auto;
+      margin-bottom: 40px; }
+    footer .text::after {
+      content: "";
+      width: 230px;
+      height: 2px;
+      background-color: #ffffff;
+      display: block;
+      margin: auto;
+      margin-top: 40px; }
+  footer .social a {
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 30px; }
+    footer .social a:lastchild {
+      margin-right: 0px; }
+  footer .social img {
+    height: 36px; }
+  footer p.copy-right {
+    font-size: 12px;
+    color: #ffffff; }
+
+@media only screen and (max-width: 767px) {
+  html, body {
+    width: 100%; }
+
+  .container {
+    max-width: 100%; }
+
+  .b-title {
+    font-family: "µ╕╕µÿÄµ£¥", YuMincho, "πâÆπâ⌐πé«πâÄµÿÄµ£¥ ProN W3", "Hiragino Mincho ProN", "HGµÿÄ    µ£¥E", "∩╝¡∩╝│ ∩╝░µÿÄµ£¥", serif;
+    color: #642200;
+    font-weight: 600;
+    font-size: 36px;
+    font-size: 20px; }
+
+  a.menu-name, .s-title, p.copy-right {
+    font-size: 14px;
+    font-weight: 400;
+    color: #ffffff;
+    font-family: 'Muli', sans-serif;
+    font-size: 12px; }
+
+  .text {
+    font-size: 13px;
+    font-weight: 500;
+    color: #000000;
+    font-size: 12px; }
+
+  header .slider {
+    background-repeat: no-repeat;
+    background-position: center;
+    border-width: 10px; }
+  header .container {
+    height: 100vh; }
+  header .logo {
+    margin-top: 130px;
+    width: 110px;
+    height: 130px;
+    margin-bottom: 60px; }
+  header h2 {
+    margin-bottom: 15px; }
+  header .btn-menu {
+    position: fixed;
+    right: 20px;
+    top: 30px;
+    cursor: pointer;
+    z-index: 100; }
+  header .btn-menu .bar1, header .bar2, header .bar3 {
+    width: 30px;
+    height: 2px;
+    background-color: #642200;
+    margin: 8px 0;
+    transition: 0.4s; }
+  header .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-6px, 6px); }
+  header .change .bar2 {
+    opacity: 0; }
+  header .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px); }
+  header nav.menu {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #f9f4f0;
+    top: 0px;
+    left: 0px;
+    z-index: 50; }
+  header .menuToggle {
+    display: block !important; }
+  header nav.menu li, header nav.menu ul {
+    display: block; }
+  header nav.menu li {
+    margin-bottom: 40px; }
+    header nav.menu li:first-child {
+      margin-top: 80px; }
+    header nav.menu li::last-child {
+      margin-bottom: 45px; }
+  header nav.menu .menu-name {
+    margin: 0px;
+    font-size: 18px;
+    color: #642200; }
+  header nav.menu .social-media:last-child {
+    margin-right: 0px; }
+
+  section.content-1 {
+    height: 564px; }
+    section.content-1 .card {
+      width: 100%;
+      max-width: 100%;
+      height: 282px; }
+    section.content-1 .box {
+      width: 275px;
+      height: 206px;
+      text-align: center; }
+    section.content-1 .symbo {
+      display: none; }
+    section.content-1 .text-box {
+      padding: 0px;
+      margin-top: 30px; }
+    section.content-1 .b-title {
+      width: 60%;
+      margin: auto;
+      line-height: 30px; }
+    section.content-1 .btn {
+      width: 235px;
+      height: 37px;
+      margin: 20px auto;
+      color: #ffffff;
+      background: #642200; }
+
+  section.content-2 {
+    height: 429px; }
+    section.content-2 h1 {
+      top: 60px;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      -ms-transform: translate(-50%, 0%); }
+    section.content-2 h1 span {
+      display: inline-block;
+      width: 20px; }
+    section.content-2 .text {
+      padding: 0px 20px; }
+    section.content-2 .left p {
+      top: 100px;
+      left: 50%;
+      -webkit-transform: translate(-50%, 0%) rotate(0deg);
+      -moz-transform: translate(-50%, 0%) rotate(0deg);
+      -ms-transform: translate(-50%, 0%) rotate(0deg);
+      -o-transform: translate(-50%, 0%) rotate(0deg);
+      transform: translate(-50%, 0%) rotate(0deg); }
+    section.content-2 .right {
+      top: 153px;
+      left: 0px; }
+    section.content-2 .right p {
+      line-height: 25px; }
+    section.content-2 .btn {
+      width: 335px;
+      top: 209px;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      -ms-transform: translate(-50%, 0%); }
+
+  section.content-3 {
+    height: 1316px; }
+    section.content-3 .card {
+      width: 90%;
+      margin: 40px auto 0px auto !important;
+      float: none; }
+    section.content-3 .title p {
+      font-size: 13px;
+      margin-top: 23px; }
+    section.content-3 .title h1 {
+      padding-top: 60px; }
+    section.content-3 .card-title {
+      font-size: 13px;
+      border: none;
+      font-weight: 500;
+      margin-bottom: 30px; }
+    section.content-3 .card-item {
+      width: 100%; }
+    section.content-3 .btn {
+      margin-top: 40px;
+      width: 335px; }
+
+  footer {
+    height: 431px; }
+    footer .logo img {
+      margin-top: 50px;
+      height: 72px;
+      width: 60px; }
+    footer .text {
+      width: 90%;
+      height: auto;
+      margin: 35px auto;
+      font-size: 10px; }
+      footer .text::before {
+        width: 113px;
+        height: 1px;
+        margin-top: 25px; }
+      footer .text::after {
+        width: 113px;
+        height: 1px;
+        margin-top: 25px; }
+    footer .social img {
+      width: 34px;
+      height: 34px; }
+    footer p.copy-right {
+      font-size: 10px; } }
+
+/*# sourceMappingURL=main.css.map */

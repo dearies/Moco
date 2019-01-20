@@ -1,0 +1,602 @@
+$color-primary: #642200;
+$color-secondary: #000000;
+$color-third: #ffffff;
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    width: 1920px;
+    height: auto;
+    font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+}
+//font text in web
+@mixin font-small-latin {
+    font-size: 14px;
+    font-weight: 400;
+    color: $color-third;
+    font-family: 'Muli', sans-serif;
+}
+@mixin font-small-jp {
+    font-size: 13px;
+    font-weight: 500;
+    color: $color-secondary;
+}
+@mixin font-big-jp {
+    font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明    朝E", "ＭＳ Ｐ明朝", serif;
+    color: $color-primary;
+    font-weight: 600;
+    font-size: 36px;
+}
+.b-title {
+    @include font-big-jp();
+}
+a.menu-name, .s-title, p.copy-right {
+    @include font-small-latin();
+}
+.text {
+    @include font-small-jp();
+}
+//code for container
+.container {
+    width: 1000px;
+    height: auto;
+    margin: auto;
+    text-align: center;
+}
+//box use in heaeder and content 1
+@mixin center-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 5;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+}
+@mixin social-media {
+    display: inline-block;
+    margin-right: 15px;
+    &:lastchild {
+        margin-right: 0px;
+    }
+}
+
+// code for button
+@mixin btn {    
+    width: 218px;
+    height: 34px;
+    border: 2px solid $color-primary;
+    text-align: center;
+    line-height: 32px;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 16px;
+    font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+    &:hover {
+        background-color: $color-primary;
+        color: $color-third;
+    }
+}
+// code for header
+header {
+    .slider {
+        max-width: 100%;
+        border: 20px solid white;
+        height: 100vh;
+        background-image: url('../images/slider/main03.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    .logo {
+        margin-top: 250px;
+        height: 163px;
+        margin-bottom: 75px;
+    }
+    h2.b-title {
+        color: $color-third;
+    }
+    p.s-title {
+        margin: 50px 0px 78px 0px;
+        font-weight: bold;
+    }
+    .menu ul {
+        display: inline-block;
+    }
+    .menu li{
+        list-style: none;
+        display: inline-block;
+    }
+    .menu .menu-name{
+        text-decoration: none;
+        text-transform: uppercase;
+        margin-right: 50px;
+        font-weight: bold;
+    }
+    a.social-media {
+        @include social-media();
+    }
+    a.social-media img{
+        height: 36px;
+        width: 36px;
+    }
+}
+//end header
+//start with sections
+section.content-1 {
+    width: 100%;
+    max-width:100%;
+    height: 424px;
+    .card {
+        width: 50%;
+        height: 100%;
+        background-image: url('../images/content-1/bg_bake.jpg');
+        background-size: cover;
+        float: left;
+        position: relative;
+    }
+    .right {
+        background-image: url('../images/content-1/bg_cake.jpg');
+    }
+    .symbo {
+        position: absolute;
+        top: 77px;
+        right: 250px;
+        z-index: 6;
+    }
+    .box {
+        width: 520px;
+        height: 245px;
+        @include center-box();
+        background-color: rgba(255, 255, 255, 0.4588235294117647);
+    }
+    .text-box {
+        padding: 35px 0px 35px 70px;
+    }
+    .s-title {
+        margin-bottom: 25px;
+    }
+    .s-title, .b-title, .btn {
+        color: $color-primary;
+    }
+    .b-title {
+        width: 300px;
+        line-height: 42px;
+        font-weight: 500;
+    }
+    .btn {
+        @include btn();
+        margin-top: 25px;
+    }
+}
+//end content 1
+//content 2 start
+section.content-2 {
+    max-width: 100%;
+    height: 393px;
+    background-color: #fff3e1;
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+    h1 {
+        color: $color-primary;
+        position: absolute;
+        top: 90px;
+        left: 0px;
+    }
+    h1 span {
+        display: block;
+        width: 40px;
+        line-height: 40px;
+        font-weight: 400;
+    }
+    .left p {
+        color: $color-primary;
+        position: absolute;
+        top: 120px;
+        left: 55px;
+        -webkit-transform: rotate(90deg);	
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+    .right {
+        position: absolute;
+        top: 100px;
+        left: 120px;
+    }
+    .right p {
+        color: $color-secondary;
+        line-height: 30px;
+        text-align: left;
+        font-weight: 400;
+    }
+    .btn {
+        position: absolute;
+        top: 145px;
+        left: 0px;
+        background-color: $color-primary;
+        color: white;
+        @include btn();
+    }
+}
+// end section content-2
+//start section content-3
+section.content-3 {
+    max-width: 100%;
+    height: 692px;
+    background-color: #ff9c46;
+    .title h1{
+        color: $color-primary;
+        padding-top: 90px;
+    }
+    .title p {
+        color: $color-primary;
+        margin-top: 20px;
+        margin-bottom: 46px;
+    }
+    .card {
+        width: 300px;
+        height: 312px;
+        float: left;
+        margin-right: 50px;
+        &:last-child {
+            margin-right: 0px;
+        }
+    }
+    .card-title {
+        @include font-small-jp();
+        font-size: 14px;
+        color: $color-primary;
+        display: inline-block;
+        border-bottom: 2px solid $color-primary;
+        margin-bottom: 20px;
+    }
+    .card-item {
+        width: 300px;
+        height: 80px;
+        background: #fff3e1;
+        text-align: left;
+        border: 1px solid #fff3e1;
+        margin-bottom: 15px;
+    }
+    .card-item img {
+        height: 80px;
+        display: inline-block;
+        float: left;
+    }
+    .text {
+        width: 220px;
+        height: 80px;
+        float: left;
+        
+    }
+    .text p {
+        color: $color-primary;
+        display: inline-block;
+        padding-left: 15px;
+        &:first-child {
+            padding-top: 15px;
+        }
+        &:last-child {
+            color: $color-secondary;
+        }
+    }
+    .btn {
+        @include btn();
+        width: 300px;
+        display: inline-block;
+        background: $color-primary;
+        color: $color-third;
+        margin-top: 50px;
+    }
+}
+//end section content-3
+//start footer
+footer {
+    width: 100%;
+    max-width: 100%;
+    height: 535px;
+    background-image: url('../images/footer/footer_about.jpg');
+    background-size: cover;
+    .logo img {
+        width: 70px;
+        height: 84px;
+        margin-top: 70px;
+    }
+    .text {
+        width: 390px;
+        height: 150px;
+        line-height: 20px;
+        margin: 30px auto;
+        color: $color-third;
+        &::before {
+            content: "";
+            width: 230px;
+            height: 2px;
+            background-color: $color-third;
+            display: block;
+            margin: auto;
+            margin-bottom: 40px;
+        }
+        &::after {
+            content: "";
+            width: 230px;
+            height: 2px;
+            background-color: $color-third;
+            display: block;
+            margin: auto;
+            margin-top: 40px;
+        }
+    }
+    .social a {
+        @include social-media();
+        margin-bottom: 30px;
+    }
+    .social img {
+        height: 36px;
+    }
+    p.copy-right {
+        font-size: 12px;        
+        color: $color-third;
+    }
+}
+//end footer
+
+//CSS for Smart Phone -----------------------------------------------------------------------------------------
+@media only screen and (max-width: 767px) {
+    html, body {
+        width: 100%;
+    }
+    .container {
+        max-width: 100%;
+    }
+    //font text in web
+    @mixin font-small-latin {
+        font-size: 14px;
+        font-weight: 400;
+        color: $color-third;
+        font-family: 'Muli', sans-serif;
+    }
+    @mixin font-small-jp {
+        font-size: 13px;
+        font-weight: 500;
+        color: $color-secondary;
+    }
+    @mixin font-big-jp {
+        font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明    朝E", "ＭＳ Ｐ明朝", serif;
+        color: $color-primary;
+        font-weight: 600;
+        font-size: 36px;
+    }
+    .b-title {
+        @include font-big-jp();
+        font-size: 20px;
+    }
+    a.menu-name, .s-title, p.copy-right {
+        @include font-small-latin();
+        font-size: 12px;
+    }
+    .text {
+        @include font-small-jp();
+        font-size: 12px;
+    }
+    header {
+        .slider {
+            background-repeat: no-repeat;
+            background-position: center; 
+            border-width: 10px;
+        }
+        .container {
+            height: 100vh;
+        }
+        .logo {
+            margin-top: 130px;
+            width: 110px;
+            height: 130px;
+            margin-bottom: 60px;
+        }
+        h2 {
+            margin-bottom: 15px;
+        }
+        .btn-menu {
+            position: fixed;
+            right: 20px;
+            top: 30px;
+            cursor: pointer;
+            z-index: 100;
+        }
+        .btn-menu .bar1, .bar2, .bar3 {
+            width: 30px;
+            height: 2px;
+            background-color: $color-primary;
+            margin: 8px 0;
+            transition: 0.4s;
+        }
+        .change .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+        transform: rotate(-45deg) translate(-6px, 6px);
+        }
+        .change .bar2 {
+            opacity: 0;
+        }
+        .change .bar3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg) translate(-8px, -8px);
+        }
+        nav.menu {
+            display: none;
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background-color: #f9f4f0;
+            top: 0px;
+            left: 0px;
+            z-index: 50;
+        }
+        .menuToggle {
+            display: block!important;
+        }
+        nav.menu li, nav.menu ul {
+            display: block;
+        }
+        nav.menu li {
+            margin-bottom: 40px;
+            &:first-child {
+                margin-top: 80px;
+            }
+            &::last-child {
+                margin-bottom: 45px;
+            }
+        }
+        nav.menu .menu-name {
+            margin: 0px;
+            font-size: 18px;
+            color: $color-primary;
+        }
+        nav.menu .social-media {
+            &:last-child {
+                margin-right: 0px;
+            }
+        }
+    }
+    //END HEADER .................................................
+    //start with content-1
+    section.content-1 {
+        height: 564px;
+        .card {
+            width: 100%;
+            max-width: 100%;
+            height: 282px;
+        }
+        .box {
+            width: 275px;
+            height: 206px;
+            text-align: center;
+        }
+        .symbo {
+            display: none;
+        }
+        .text-box {
+            padding: 0px;
+            margin-top: 30px;
+        }
+        .b-title {
+            width: 60%;
+            margin: auto;
+            line-height: 30px;
+        }
+        .btn {
+            width: 235px;
+            height: 37px;
+            margin: 20px auto;
+            color: $color-third;
+            background: $color-primary;
+        }
+    }
+    //END SECTION CONTENT 1
+    //start content 2
+    section.content-2 {
+        height: 429px;
+        h1 {
+            top: 60px;
+            left: 50%;
+            transform: translate(-50%,0%);
+            -ms-transform: translate(-50%,0%);
+        }
+        h1 span {
+            display: inline-block;
+            width: 20px;
+        }
+        .text {
+            padding: 0px 20px;
+        }
+        .left p {
+            top: 100px;
+            left: 50%;
+            -webkit-transform: translate(-50%,0%) rotate(0deg);
+            -moz-transform: translate(-50%,0%) rotate(0deg);
+            -ms-transform: translate(-50%,0%) rotate(0deg);
+            -o-transform: translate(-50%,0%) rotate(0deg);
+            transform: translate(-50%,0%) rotate(0deg);
+        }
+        .right {
+            top: 153px;
+            left: 0px;
+        }
+        .right p{
+            line-height: 25px;
+        }
+        .btn {
+            width: 335px;
+            top: 209px;
+            left: 50%;
+            transform: translate(-50%,0%);
+            -ms-transform: translate(-50%,0%);
+        }
+    }
+    //end section content 2
+    section.content-3 {
+        height: 1316px;
+        .card {
+            width: 90%;
+            margin: 40px auto 0px auto!important;
+            float: none;
+        }
+        .title p {
+            font-size: 13px;
+            margin-top: 23px;
+        }
+        .title h1 {
+            padding-top: 60px;
+        }
+        .card-title {
+            font-size: 13px;
+            border: none;
+            font-weight: 500;
+            margin-bottom: 30px;
+        }
+        .card-item {
+            width: 100%;
+        }
+        .btn {
+            margin: 40px;
+            width: 335px;
+        }
+    }
+    //end section content 3
+    //start footer 
+    footer {
+        height: 431px;
+        
+        .logo img {
+            margin-top: 50px;
+            height: 72px;
+            width: 60px;
+        }
+        .text {
+            width: 90%;
+            height: auto;
+            margin: 35px auto;
+            font-size: 10px;
+            &::before {
+                width: 113px;
+                height: 1px;
+                margin-top: 25px;
+            }
+            &::after {
+                width: 113px;
+                height: 1px;
+                margin-top: 25px;
+            }
+        }
+        .social img {
+            width: 34px;
+            height: 34px;
+        }
+        p.copy-right {
+            font-size: 10px;
+        }
+    }
+}
