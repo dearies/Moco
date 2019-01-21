@@ -79,6 +79,7 @@ a.menu-name, .s-title, p.copy-right {
 }
 // code for header
 header {
+    position: relative;
     .slider {
         max-width: 100%;
         border: 20px solid white;
@@ -87,8 +88,11 @@ header {
         background-size: cover;
         background-attachment: fixed;
     }
+    .container {
+        height: auto;
+        @include center-box();
+    }
     .logo {
-        margin-top: 250px;
         height: 163px;
         margin-bottom: 75px;
     }
@@ -155,13 +159,12 @@ section.content-1 {
     .s-title {
         margin-bottom: 25px;
     }
-    .s-title, .b-title, .btn {
+    .s-title, .btn {
         color: $color-primary;
     }
     .b-title {
         width: 300px;
         line-height: 42px;
-        font-weight: 500;
     }
     .btn {
         @include btn();
@@ -174,15 +177,9 @@ section.content-2 {
     max-width: 100%;
     height: 393px;
     background-color: #fff3e1;
+    text-align: left;
     .container {
-        position: relative;
-        z-index: 1;
-    }
-    h1 {
-        color: $color-primary;
-        position: absolute;
-        top: 90px;
-        left: 0px;
+        text-align: left;
     }
     h1 span {
         display: block;
@@ -190,34 +187,37 @@ section.content-2 {
         line-height: 40px;
         font-weight: 400;
     }
+    .left, .right {
+        width: 100px;
+        height: 215px;
+        float: left;
+        margin-top: 90px;
+    }
+    .left .b-title {
+        color: $color-primary;
+        display: inline-block;
+    }
     .left p {
         color: $color-primary;
-        position: absolute;
-        top: 120px;
-        left: 55px;
         -webkit-transform: rotate(90deg);	
         -moz-transform: rotate(90deg);
         -ms-transform: rotate(90deg);
         -o-transform: rotate(90deg);
         transform: rotate(90deg);
+        margin: -164px 0px 0px 20px;
     }
     .right {
-        position: absolute;
-        top: 100px;
-        left: 120px;
+        width: 900px;
     }
     .right p {
         color: $color-secondary;
         line-height: 30px;
-        text-align: left;
-        font-weight: 400;
+        font-weight: 500;
     }
     .btn {
-        position: absolute;
-        top: 145px;
-        left: 0px;
         background-color: $color-primary;
         color: white;
+        margin-top: 40px;
         @include btn();
     }
 }
@@ -350,7 +350,9 @@ footer {
         width: 100%;
     }
     .container {
+        width: auto;
         max-width: 100%;
+        padding: 0px 20px;
     }
     //font text in web
     @mixin font-small-latin {
@@ -382,6 +384,15 @@ footer {
         @include font-small-jp();
         font-size: 12px;
     }
+    //btn
+    .btn {
+        width: 235px!important;
+        height: 37px!important;
+        margin: 20px auto!important;
+        color: $color-third!important;
+        background: $color-primary;
+        font-size: 15px!important;
+    }
     header {
         .slider {
             background-repeat: no-repeat;
@@ -390,6 +401,8 @@ footer {
         }
         .container {
             height: 100vh;
+            position: static;
+            transform: none;
         }
         .logo {
             margin-top: 130px;
@@ -487,66 +500,67 @@ footer {
             margin: auto;
             line-height: 30px;
         }
-        .btn {
-            width: 235px;
-            height: 37px;
-            margin: 20px auto;
-            color: $color-third;
-            background: $color-primary;
-        }
+        
     }
     //END SECTION CONTENT 1
     //start content 2
     section.content-2 {
-        height: 429px;
-        h1 {
-            top: 60px;
-            left: 50%;
-            transform: translate(-50%,0%);
-            -ms-transform: translate(-50%,0%);
+        height: 459px;
+        .container {
+            text-align: center;
+        }
+        .left, .right {
+            width: 100%;
+            height: auto;
+            margin: 0;
+        }
+        .left .btn-title {
+            display: block;
+        }
+        .left .b-title {
+            padding-top: 50px;
+        }
+        .left p {
+            padding-top: 15px;
+            display: block;
+            margin: 0;
+            -webkit-transform: translate(0) rotate(0deg);
+            -moz-transform: translate(0) rotate(0deg);
+            -ms-transform: translate(0) rotate(0deg);
+            -o-transform: translate(0) rotate(0deg);
+            transform: translate(0) rotate(0deg);
         }
         h1 span {
             display: inline-block;
             width: 20px;
         }
-        .text {
-            padding: 0px 20px;
-        }
-        .left p {
-            top: 100px;
-            left: 50%;
-            -webkit-transform: translate(-50%,0%) rotate(0deg);
-            -moz-transform: translate(-50%,0%) rotate(0deg);
-            -ms-transform: translate(-50%,0%) rotate(0deg);
-            -o-transform: translate(-50%,0%) rotate(0deg);
-            transform: translate(-50%,0%) rotate(0deg);
-        }
-        .right {
-            top: 153px;
-            left: 0px;
-        }
         .right p{
             line-height: 25px;
         }
+        .right .text {
+            padding-top: 45px;
+        }
         .btn {
-            width: 335px;
-            top: 209px;
-            left: 50%;
-            transform: translate(-50%,0%);
-            -ms-transform: translate(-50%,0%);
+            width: 100%!important;
+            height: 36px!important;
+            margin-top: 30px!important;
+            margin-bottom: 0px !important;
         }
     }
     //end section content 2
     section.content-3 {
         height: 1316px;
         .card {
-            width: 90%;
+            width: 100%;
             margin: 40px auto 0px auto!important;
             float: none;
         }
+        .text {
+            width: 200px;
+        }
         .title p {
             font-size: 13px;
-            margin-top: 23px;
+            margin-top: 20px;
         }
         .title h1 {
             padding-top: 60px;
@@ -561,8 +575,10 @@ footer {
             width: 100%;
         }
         .btn {
-            margin: 40px;
-            width: 335px;
+            width: 100%!important;
+            height: 36px!important;
+            margin-top: 30px!important;
+            margin-bottom: 0px !important;
         }
     }
     //end section content 3
@@ -576,17 +592,17 @@ footer {
             width: 60px;
         }
         .text {
-            width: 90%;
-            height: auto;
+            width: 100%;
+            height: 100px;
             margin: 35px auto;
             font-size: 10px;
             &::before {
-                width: 113px;
+                width: 115px;
                 height: 1px;
                 margin-top: 25px;
             }
             &::after {
-                width: 113px;
+                width: 115px;
                 height: 1px;
                 margin-top: 25px;
             }
@@ -599,4 +615,5 @@ footer {
             font-size: 10px;
         }
     }
+    //end footer
 }

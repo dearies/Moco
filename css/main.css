@@ -31,40 +31,49 @@ a.menu-name, .s-title, p.copy-right {
   margin: auto;
   text-align: center; }
 
-header .slider {
-  max-width: 100%;
-  border: 20px solid white;
-  height: 100vh;
-  background-image: url("../images/slider/main03.jpg");
-  background-size: cover;
-  background-attachment: fixed; }
-header .logo {
-  margin-top: 250px;
-  height: 163px;
-  margin-bottom: 75px; }
-header h2.b-title {
-  color: #ffffff; }
-header p.s-title {
-  margin: 50px 0px 78px 0px;
-  font-weight: bold; }
-header .menu ul {
-  display: inline-block; }
-header .menu li {
-  list-style: none;
-  display: inline-block; }
-header .menu .menu-name {
-  text-decoration: none;
-  text-transform: uppercase;
-  margin-right: 50px;
-  font-weight: bold; }
-header a.social-media {
-  display: inline-block;
-  margin-right: 15px; }
-  header a.social-media:lastchild {
-    margin-right: 0px; }
-header a.social-media img {
-  height: 36px;
-  width: 36px; }
+header {
+  position: relative; }
+  header .slider {
+    max-width: 100%;
+    border: 20px solid white;
+    height: 100vh;
+    background-image: url("../images/slider/main03.jpg");
+    background-size: cover;
+    background-attachment: fixed; }
+  header .container {
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 5;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%); }
+  header .logo {
+    height: 163px;
+    margin-bottom: 75px; }
+  header h2.b-title {
+    color: #ffffff; }
+  header p.s-title {
+    margin: 50px 0px 78px 0px;
+    font-weight: bold; }
+  header .menu ul {
+    display: inline-block; }
+  header .menu li {
+    list-style: none;
+    display: inline-block; }
+  header .menu .menu-name {
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-right: 50px;
+    font-weight: bold; }
+  header a.social-media {
+    display: inline-block;
+    margin-right: 15px; }
+    header a.social-media:lastchild {
+      margin-right: 0px; }
+  header a.social-media img {
+    height: 36px;
+    width: 36px; }
 
 section.content-1 {
   width: 100%;
@@ -98,12 +107,11 @@ section.content-1 {
     padding: 35px 0px 35px 70px; }
   section.content-1 .s-title {
     margin-bottom: 25px; }
-  section.content-1 .s-title, section.content-1 .b-title, section.content-1 .btn {
+  section.content-1 .s-title, section.content-1 .btn {
     color: #642200; }
   section.content-1 .b-title {
     width: 300px;
-    line-height: 42px;
-    font-weight: 500; }
+    line-height: 42px; }
   section.content-1 .btn {
     width: 218px;
     height: 34px;
@@ -122,45 +130,41 @@ section.content-1 {
 section.content-2 {
   max-width: 100%;
   height: 393px;
-  background-color: #fff3e1; }
+  background-color: #fff3e1;
+  text-align: left; }
   section.content-2 .container {
-    position: relative;
-    z-index: 1; }
-  section.content-2 h1 {
-    color: #642200;
-    position: absolute;
-    top: 90px;
-    left: 0px; }
+    text-align: left; }
   section.content-2 h1 span {
     display: block;
     width: 40px;
     line-height: 40px;
     font-weight: 400; }
+  section.content-2 .left, section.content-2 .right {
+    width: 100px;
+    height: 215px;
+    float: left;
+    margin-top: 90px; }
+  section.content-2 .left .b-title {
+    color: #642200;
+    display: inline-block; }
   section.content-2 .left p {
     color: #642200;
-    position: absolute;
-    top: 120px;
-    left: 55px;
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     -o-transform: rotate(90deg);
-    transform: rotate(90deg); }
+    transform: rotate(90deg);
+    margin: -164px 0px 0px 20px; }
   section.content-2 .right {
-    position: absolute;
-    top: 100px;
-    left: 120px; }
+    width: 900px; }
   section.content-2 .right p {
     color: #000000;
     line-height: 30px;
-    text-align: left;
-    font-weight: 400; }
+    font-weight: 500; }
   section.content-2 .btn {
-    position: absolute;
-    top: 145px;
-    left: 0px;
     background-color: #642200;
     color: white;
+    margin-top: 40px;
     width: 218px;
     height: 34px;
     border: 2px solid #642200;
@@ -292,7 +296,9 @@ footer {
     width: 100%; }
 
   .container {
-    max-width: 100%; }
+    width: auto;
+    max-width: 100%;
+    padding: 0px 20px; }
 
   .b-title {
     font-family: "µ╕╕µÿÄµ£¥", YuMincho, "πâÆπâ⌐πé«πâÄµÿÄµ£¥ ProN W3", "Hiragino Mincho ProN", "HGµÿÄ    µ£¥E", "∩╝¡∩╝│ ∩╝░µÿÄµ£¥", serif;
@@ -314,12 +320,22 @@ footer {
     color: #000000;
     font-size: 12px; }
 
+  .btn {
+    width: 235px !important;
+    height: 37px !important;
+    margin: 20px auto !important;
+    color: #ffffff !important;
+    background: #642200;
+    font-size: 15px !important; }
+
   header .slider {
     background-repeat: no-repeat;
     background-position: center;
     border-width: 10px; }
   header .container {
-    height: 100vh; }
+    height: 100vh;
+    position: static;
+    transform: none; }
   header .logo {
     margin-top: 130px;
     width: 110px;
@@ -392,54 +408,52 @@ footer {
       width: 60%;
       margin: auto;
       line-height: 30px; }
-    section.content-1 .btn {
-      width: 235px;
-      height: 37px;
-      margin: 20px auto;
-      color: #ffffff;
-      background: #642200; }
 
   section.content-2 {
-    height: 429px; }
-    section.content-2 h1 {
-      top: 60px;
-      left: 50%;
-      transform: translate(-50%, 0%);
-      -ms-transform: translate(-50%, 0%); }
+    height: 459px; }
+    section.content-2 .container {
+      text-align: center; }
+    section.content-2 .left, section.content-2 .right {
+      width: 100%;
+      height: auto;
+      margin: 0; }
+    section.content-2 .left .btn-title {
+      display: block; }
+    section.content-2 .left .b-title {
+      padding-top: 50px; }
+    section.content-2 .left p {
+      padding-top: 15px;
+      display: block;
+      margin: 0;
+      -webkit-transform: translate(0) rotate(0deg);
+      -moz-transform: translate(0) rotate(0deg);
+      -ms-transform: translate(0) rotate(0deg);
+      -o-transform: translate(0) rotate(0deg);
+      transform: translate(0) rotate(0deg); }
     section.content-2 h1 span {
       display: inline-block;
       width: 20px; }
-    section.content-2 .text {
-      padding: 0px 20px; }
-    section.content-2 .left p {
-      top: 100px;
-      left: 50%;
-      -webkit-transform: translate(-50%, 0%) rotate(0deg);
-      -moz-transform: translate(-50%, 0%) rotate(0deg);
-      -ms-transform: translate(-50%, 0%) rotate(0deg);
-      -o-transform: translate(-50%, 0%) rotate(0deg);
-      transform: translate(-50%, 0%) rotate(0deg); }
-    section.content-2 .right {
-      top: 153px;
-      left: 0px; }
     section.content-2 .right p {
       line-height: 25px; }
+    section.content-2 .right .text {
+      padding-top: 45px; }
     section.content-2 .btn {
-      width: 335px;
-      top: 209px;
-      left: 50%;
-      transform: translate(-50%, 0%);
-      -ms-transform: translate(-50%, 0%); }
+      width: 100% !important;
+      height: 36px !important;
+      margin-top: 30px !important;
+      margin-bottom: 0px !important; }
 
   section.content-3 {
     height: 1316px; }
     section.content-3 .card {
-      width: 90%;
+      width: 100%;
       margin: 40px auto 0px auto !important;
       float: none; }
+    section.content-3 .text {
+      width: 200px; }
     section.content-3 .title p {
       font-size: 13px;
-      margin-top: 23px; }
+      margin-top: 20px; }
     section.content-3 .title h1 {
       padding-top: 60px; }
     section.content-3 .card-title {
@@ -450,8 +464,10 @@ footer {
     section.content-3 .card-item {
       width: 100%; }
     section.content-3 .btn {
-      margin-top: 40px;
-      width: 335px; }
+      width: 100% !important;
+      height: 36px !important;
+      margin-top: 30px !important;
+      margin-bottom: 0px !important; }
 
   footer {
     height: 431px; }
@@ -460,16 +476,16 @@ footer {
       height: 72px;
       width: 60px; }
     footer .text {
-      width: 90%;
-      height: auto;
+      width: 100%;
+      height: 100px;
       margin: 35px auto;
       font-size: 10px; }
       footer .text::before {
-        width: 113px;
+        width: 115px;
         height: 1px;
         margin-top: 25px; }
       footer .text::after {
-        width: 113px;
+        width: 115px;
         height: 1px;
         margin-top: 25px; }
     footer .social img {
