@@ -137,6 +137,12 @@ section.content-1 {
         height: 442px;
         float: right
     }
+    .container.top {
+        margin-bottom: 70px;
+    }
+    .container.bottom {
+        border-top: 1px solid #cccccc;
+    }
     .container.bottom .right {
         float: left;
     }
@@ -151,7 +157,7 @@ section.content-1 {
         padding-right: 50px;
     }
     .box-2 {
-        margin-top: 150px;
+        padding-top: 70px;
         p.text, p.main-text {
             padding: 0px 0px 0px 50px;
         }
@@ -439,8 +445,20 @@ footer {
         .left {
             margin-top: 30px;
         }
+        .container.top {
+            margin-bottom: 30px;
+        }
         .container.bottom {
             margin-top: 30px;
+            border: none;
+            &::before {
+                content: "";
+                width: 100%;
+                height: 1px;
+                background-color: #cccc;
+                display: block;
+               
+            }
         }
         .container.bottom .right {
             padding-top: 30px;
