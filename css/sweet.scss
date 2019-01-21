@@ -191,7 +191,7 @@ section.content-2 {
         &::after {
             content: '';
             width: 100%;
-            border: 1px dashed $color-primary;;
+            border-bottom: 1px dashed $color-primary;;
             display: block;
             margin: 16px 0px;
         }

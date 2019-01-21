@@ -141,7 +141,7 @@ section.content-2 {
     section.content-2 p.text::after {
       content: '';
       width: 100%;
-      border: 1px dashed #642200;
+      border-bottom: 1px dashed #642200;
       display: block;
       margin: 16px 0px; }
   section.content-2 span {
